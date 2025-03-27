@@ -1,0 +1,60 @@
+<div class="cart-col2" >
+    <div class="cart-col-1">
+        <div class="cart-col-1-1">
+            <h3>Giỏ hàng của bạn</h3>
+        </div>
+        <div class="cart-col-1-2" id="mycart1" >
+            <div class="showcart" *ngFor="let p of cart">  
+                <div class="cart-content1">  
+                    <div class="cart-image">  
+                        <img  src="http://localhost:3000/image/{{p.img}}" width="100">  
+                    </div>  
+                    <div class="cart-content1-1">  
+                        <div class="cart-ten">  
+                            <p>{{p.name}}</p>  
+                        </div>  
+                        <div class="cart-gia">  
+                            <p>{{p.price}}</p>  
+                        </div>  
+                    </div>  
+                </div>  
+                <div class="cart-content2">  
+                    <div class="cart-price">  
+                        <p>{{p.price}}</p>  
+                    </div>  
+                    <div class="cart-sl">  
+                        <div class="input-chitiet-ttt">  
+                            <div class="input-button-sl">  
+                                <input type="button" value="-" class="inputcong" >  
+                                <input type="text" id="" value="" class="input-sl" [(ngModel)]="p.quantify" min="1" >  
+                                <input type="button" value="+" class="inputtru" >  
+                            </div>  
+                        </div>  
+                    </div>  
+                </div>   
+                <div class="cart-content3">
+                    <i (click)="removeFromCart(product.id)" class="fa-solid fa-trash-can"></i>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="cart-col-2">
+        <div class="cart-col2-content">
+            <h3>Thông tin đơn hàng </h3>
+        </div>
+        <div class="cart-col2-tongtien">
+            <div class="    cart-col2-tt">
+                <h4>Tổng tiền:  </h4>
+                <span>{{sumMoney() | number }} đ</span>
+            </div>
+            <div class="cart-col2-gia">
+                <h2 id="tongtatca"></h2>
+            </div>
+            
+        </div>
+        <div class="cart-col2-button">
+            <button><a href=""><h3>THANH TOÁN</h3></a></button>
+        </div>
+    </div>
+  
+</div> 

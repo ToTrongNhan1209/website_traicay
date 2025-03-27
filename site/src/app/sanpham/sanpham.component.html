@@ -1,0 +1,25 @@
+<div>  
+    <div class="sort_products">  
+        <select [(ngModel)]="sortOrder" (ngModelChange)="onFilterChange()">  
+            <option value="">-- Chọn thứ tự --</option>  
+            <option value="asc">Giá tăng dần</option>  
+            <option value="desc">Giá giảm dần</option>  
+        </select>  
+  
+        <select class="select2" id="category" [(ngModel)]="sortCategory" (ngModelChange)="onFilterChange()">  
+            <option value="">--Tất cả --</option>  
+            <option value="Trái ngon hôm nay">Trái ngon hôm nay</option>  
+            <option value="Trái cây nhập khẩu">Trái cây nhập khẩu</option>  
+        </select>  
+        
+        <div class="select3">
+        <label  for="minPrice">Giá tối thiểu: </label>  
+        <input type="number" id="minPrice" [(ngModel)]="minPrice" (input)="onFilterChange()">  
+  
+        <label for="maxPrice">Giá tối đa:</label>  
+        <input type="number" id="maxPrice" [(ngModel)]="maxPrice" (input)="onFilterChange()">  
+    </div>
+    </div>  
+  
+    <app-listcard [data]="sortedProducts" [title]="'Danh sách sản phẩm'"></app-listcard>   
+</div>  

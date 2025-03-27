@@ -1,0 +1,27 @@
+<h4>{{'lienhe works!' | uppercase}}</h4>
+<h3>{{'10000000' | currency}}</h3>
+<p>{{'2025-09-12' | date:'dd/MM/yyyy'}}</p>
+<p>{{0.5 | percent}}</p>
+
+<p>Chao mung {{userName}} den voi angularr</p>
+<img *ngIf="imageIRL" [src]="imageIRL" alt="" width="200" height="200">
+
+<button (click)="handleClick()">Nhan vao day</button>
+
+<input [(ngModel)]="userInput" type="text" style="margin-left: 20px;">
+<p>Bạn vừa nhập: {{userInput}}</p>
+
+<h3 *ngIf="AnHien">Day la demo ngIf</h3>
+<button (click)="Totalmessage()" >Ân hiện chữ</button>
+<br>
+<button (click)="changeImage()">Đổi ảnh</button>
+
+<div [ngSwitch]="gioitinh">
+<h3 *ngSwitchCase="'nam'">Giới tính: nam</h3>
+<h3 *ngSwitchCase="'nữ'">Giới tính: nữ</h3>
+<h3 *ngSwitchDefault>Giới tính khác</h3>
+</div>
+<button (click)="changeGT()">changeGT</button>
+
+<h3 [ngStyle]="{'color': isRed ? 'red' : 'blue'}">DAY LA DONG CHU SE DOI MAU</h3>
+<button (click)="changeColor()">Đổi Màu</button>

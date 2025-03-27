@@ -1,0 +1,128 @@
+
+<div class="header">
+  <div class="image">
+      <a href="home.html"><img src="../assets/image/2-removebg-preview.png"></a>
+  </div>
+
+  <form class="tt-tt"  (ngSubmit)="onSearch()">
+    <div class="wrap-seach">
+    <input class="seach_1" type="search" placeholder="Tìm kiếm sản phẩm..." name="search" [(ngModel)]=" keyword">
+    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+    <!-- <input type="submit" class="seach_2" placeholder="Tìm"> -->
+    </div>
+</form>
+<!-- <div class="tt-input">
+    <input type="submit" placeholder="Nhập từ khóa tìm kiếm" id="search">
+</div> -->
+      <div class="phone">
+          <div class="icon-phone">
+              <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <div class="host-phone">
+              <span>Hotline: 123456789</span>
+          </div>
+      </div>
+      <div class="user" >
+          <div class="icon-user" >
+              <i class="fa-regular fa-user" id="icon-user"></i>
+          </div>
+          <div class="name-user">
+              <span>Tài khoản</span>
+          </div>
+
+          <div class="hien-user-full" id="hien-user" style="display: none;">
+              <div class="hien-user" >
+                  <div class="hien-user-1">
+                      <h3>ĐĂNG NHẬP TÀI KHOẢN</h3>
+                      <p>Nhập email và mất khẩu của bạn</p>
+                  </div>
+                  <div class="hien-user-2">
+                      <input type="text" placeholder="Email" id="email1">
+                  </div>
+                  <div class="hien-user-3">
+                      <input type="text" placeholder="Mật khẩu" id="pass1">
+                  </div>
+                  <div class="hien-user-4">
+                      <p>This site is protected by reCAPTCHA and the <br>
+                           Google <strong><a href="https://policies.google.com/privacy">Privacy Policy</a></strong> and <strong><a href="https://policies.google.com/terms">Terms of Service</a></strong> <br>
+                           apply.
+                      </p>
+                  </div>
+                  <div class="hien-user-5">
+                      <a href=""><p>ĐĂNG NHẬP</p></a>
+                  </div>  
+                  <div class="hien-user-6">
+                      <p>Khách hàng mới? <strong><a href="dangki.html">Tạo tài khoản</a></strong></p>
+                  </div>
+                  <div class="hien-user-7">
+                      <p>Quên mật khẩu? <strong><a href="">Khôi phục mật khẩu</a></strong></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="cart" >
+          <div class="icon-cart">
+            <a [routerLink]="['/giohang']"><i class="fa-solid fa-cart-shopping" id="icon-cart" >
+        <span id="cart-count" >{{cartService.getCartlength()}}</span>
+    </i>  </a>
+              
+          </div>
+          <div class="name-cart">
+              <span>Giỏ hàng</span>
+          </div>
+          <div class="hien-cart-full" style="display: none;" id="hien-cart">
+              <div class="hien-cart">
+                  <div class="hien-cart-1">  
+                      <h3>GIỎ HÀNG</h3>  
+                  </div>   
+                  <div class="hien-full-cart-2">
+                      <div id="mycart" style="display:none;"></div>
+                  </div>
+
+              
+              <button><a href="giohang.html">XEM GIỎ HÀNG </a></button> 
+          </div>
+          </div>
+
+      </div>
+      <button class="logout" style="display: none;">Đăng xuất</button>
+</div>
+<div class="header-menu">
+  <ul class="menu">
+      <li>
+          <a [routerLink]="['/']" >Trang chủ</a>
+      </li>
+      <li>
+          <a [routerLink]="['/sanpham']">Trái ngon<br> hôm nay</a>
+      </li>
+      <li>
+          <a href="traicayvietnam.html">Trái cây<br> Việt Nam</a>
+      </li>
+      <li>
+          <a href="traicaynhapkhau.html">Trái cây <br> nhập khẩu</a>
+      </li>
+      <li>
+          <a href="traicaycatsan.html">Trái cây<br> cắt sẵn</a>
+      </li>
+      <li>
+          <a href="quatangtraicay.html">Quà tặng <br> trái cây</a>
+      </li>
+      <li>
+          <a href="hopquanguyetcat.html">Hộp quà <br> Nguyệt Cát</a>
+      </li>
+      <li>
+          <a href="mamnguqua.html">Mâm <br> Ngũ Quả</a>
+      </li>
+      <li>
+          <a href="cauchuyenthuonghieu.html">Câu chuyện <br> thương hiệu</a>
+      </li>
+      <li>
+          <a [routerLink]="['/lienhe']">Liên hệ</a>
+      </li>
+  </ul>
+</div>
+<!-- <div class="header-banner">
+      <img id="img" src="../assets/image/slide_1_img.png" alt="">
+
+</div> -->
+

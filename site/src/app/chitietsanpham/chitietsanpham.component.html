@@ -1,0 +1,123 @@
+<div class="chitietsanpham">
+    <div class="chitietsanpham-1" *ngIf="productdetail">
+        <div class="image-chinh">
+            <img src="http://localhost:3000/image/{{productdetail.img}}"  alt="">
+        </div>
+        <div class="image-col-5"></div>
+    </div>
+    <div class="chitietsanpham-2">
+        <h4>Tour {{productdetail.name}}</h4>
+        <div class="tt-chitiet-sp">
+            <div class="msp-tt-ct">
+                <p>Mã sản phẩm: <span>{{productdetail._id}}</span></p>
+            </div>
+            <div class="tinhtrang-tt-ct">
+                <p>Tình trạng: <span>Còn hàng</span></p>
+            </div>
+        </div>
+        <h5>Mã giảm giá</h5>
+        <div class="magiamgia-chitiet">
+            <div class="magiamgia-chitiet-40k">
+               <b> <p>FREESHIP40K</p></b>
+            </div>
+            <div class="magiamgia-chitiet-mf">
+                <b><p>FREESHIPMF</p></b>
+            </div>
+        </div>
+        <div class="price-chitiet">
+            <h5>Giá: {{productdetail.price | number}} VND</h5>
+        </div>
+        <div class="input-chitiet-ttt">
+            <div class="input-chitiet-sl">
+                <input type="button" value="-" class="inputcong" id="tru" >
+                <input type="number" name="" id="sl" value="1" class="input-sl" #quantify>
+                <input type="button" value="+" class="inputtru" id="cong" >
+            </div>
+                <button (click)="addCart(quantify.value)" class="input-chitiet-themvaogio" >THÊM VÀO GIỎ</button>
+        </div>
+        
+    </div>
+</div>
+<div class="motachitiet-sp">
+    <div class="motasanpham-ct">
+        <div class="motasanpham-ct-1">
+            <h4>Mô tả sản phẩm</h4>
+        </div>
+        <div class="motasanpham-ct-2">
+            <div class="motasanpham-ct1-2-tt">
+                <p><b>Xuất Xứ:</b> Xã Định Hoà, huyện Lai Vung, Tỉnh Đồng Tháp</p>
+            </div>
+            <div class="motasanpham-ct2-2-tt">
+                <p><b>Tiêu Chuẩn Chất Lượng: </b> Vietgap</p>
+            </div>
+            <div class="motasanpham-ct3-2-tt">
+                <strong>Đặc Điểm Sản Phẩm </strong>
+                <br>
+                <p> - Giống mận An Phước được ghép từ mắt của giống mận Thongsamsri của Thái trên gốc mận xanh đường Việt Nam. Nhờ lai tạo có chọn lọc mà giống mận này rất không chỉ sai trái mà độ ngọt cũng đậm hơn giống cũ. <br>
+                    - Nhờ áp dụng kỹ thuật bọc nilon khi trái còn bé, tránh được sự tác động đáng kể từ môi trường và côn trùng. Trái mận khi lớn lên thường sở hữu hình dáng đẹp, lớp vỏ nhẵn bóng với màu đỏ thẫm quyến rũ. <br>
+                    - Bên cạnh đó, phương pháp bọc nilon trên cũng giúp nhà vườn hạn chế thuốc trừ sâu và bảo vệ thực vật khi không thật sự cần quá cần thiết. An toàn sức khỏe người tiêu dùng. <br>
+                    - Khi thưởng thức Mận An Phước, có thể cảm nhận được độ giòn tươi ngay từ miếng cắn đầu tiên. Mận mọng nước, ngọt thanh và thường vị ngọt sẽ đậm hơn khi vào mùa nắng.
+                </p>
+            </div>
+            <div class="motasanpham-ct4-2-tt">
+                <strong>Bảo Quản Và Sử Dụng </strong>
+                <p> - Mận mua về, nếu không sử dụng ngay nên bảo quản ngăn mát tủ lạnh trong khoảng từ 3-5 ngày. <br>
+                    - Không nên rửa mận trước khi bảo quản. Ăn tới đâu, rửa tới đó để bảo đảm chất lượng tốt nhất của trái. <br>
+                    - Loại bỏ những trái hư, dập, mốc, để tránh lan sang những trái bình thường khác.
+                    
+                </p>
+            </div>
+            <div class="motasanpham-ct4-2-tt">
+                <strong>Lợi Ích Của Mận An Phước</strong>
+                <p> 
+                    - Củng cố khả năng miễn dịch <br>
+                    - Hỗ trợ giảm cân<br>
+                    - Tốt cho sản phụ<br>
+                    - Giảm tích tụ cholesterol xấu<br>
+                    - Điều chỉnh đường huyết trong máu<br>  
+                    - Hỗ trợ hệ tiêu hoá 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="dichvugiaohang-ct">
+        <div class="dichvugiaohang-ct-1">
+            <h4>DỊCH VỤ GIAO HÀNG</h4>
+        </div>
+        <div class="dichvugiaohang-ct-2">
+            <div class="dichvugiaohang-ct-2-1">
+                <div class="dichvugiaohang-tron">
+                    <i class="fa-solid fa-box"></i>
+                </div>
+            </div>
+            <div class="dichvugiaohang-content">
+                <p>Cam kết 100% chính hãng</p>
+            </div>
+        </div>
+        <div class="dichvugiaohang-ct-2">
+            <div class="dichvugiaohang-ct-2-1">
+                <div class="dichvugiaohang-tron">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+            </div>
+            <div class="dichvugiaohang-content">
+                <span>Giao hàng dự kiến:</span>
+                <span><strong>Thứ 2 - Chủ nhật từ 8h00 - 21h00</strong></span>
+            </div>
+        </div>
+        <div class="dichvugiaohang-ct-2">
+            <div class="dichvugiaohang-ct-2-1">
+                <div class="dichvugiaohang-tron">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="dichvugiaohang-content">
+                <p>Hỗ trợ 24/7</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="containererr" *ngIf="!productdetail">
+    <h1>Không tìm thấy sản phẩm</h1>
+  </div>
+
